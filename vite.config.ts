@@ -4,7 +4,9 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
+    const base = env.VITE_BASE_PATH ?? (mode === 'production' ? '/cyberprompt/' : '/');
     return {
+      base,
       server: {
         port: 3000,
         host: '0.0.0.0',
@@ -16,7 +18,7 @@ export default defineConfig(({ mode }) => {
       },
       resolve: {
         alias: {
-          '@': path.resolve(__dirname, '.'),
+          '@': path.resolve(process.cwd(), '.'),
         }
       }
     };
