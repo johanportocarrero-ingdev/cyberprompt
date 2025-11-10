@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teleprompter Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arial&family=Helvetica&family=Times+New+Roman&family=Georgia&family=Roboto:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Lato:ital,wght@0,400;0,700;1,400&family=Courier+New&family=Consolas&family=Orbitron:wght@400;700&family=Rajdhani:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'neon-cyan': '#00fff9',
+              'neon-magenta': '#ff006e',
+              'neon-pink': '#ff10f0',
+              'neon-purple': '#8b00ff',
+              'neon-green': '#39ff14',
+              'neon-yellow': '#ffff00',
+              'neon-orange': '#ff9e00',
+              'dark-bg-1': '#0a0a0a',
+              'dark-bg-2': '#0d0221',
+              'dark-bg-3': '#1a0033',
+            },
+            fontFamily: {
+              'orbitron': ['Orbitron', 'sans-serif'],
+              'rajdhani': ['Rajdhani', 'sans-serif'],
+              'share-tech-mono': ['"Share Tech Mono"', 'monospace'],
+              'arial': ['Arial', 'sans-serif'],
+              'helvetica': ['Helvetica', 'sans-serif'],
+              'times-new-roman': ['"Times New Roman"', 'serif'],
+              'georgia': ['Georgia', 'serif'],
+              'roboto': ['Roboto', 'sans-serif'],
+              'montserrat': ['Montserrat', 'sans-serif'],
+              'open-sans': ['"Open Sans"', 'sans-serif'],
+              'lato': ['Lato', 'sans-serif'],
+              'courier-new': ['"Courier New"', 'monospace'],
+              'consolas': ['Consolas', 'monospace'],
+            },
+            keyframes: {
+              flicker: {
+                '0%, 100%': { opacity: 1 },
+                '50%': { opacity: 0.7 },
+              },
+              pulse: {
+                '0%, 100%': { transform: 'scale(1)', boxShadow: '0 0 5px var(--glow-color)' },
+                '50%': { transform: 'scale(1.02)', boxShadow: '0 0 20px var(--glow-color), 0 0 30px var(--glow-color)' },
+              }
+            },
+            animation: {
+              flicker: 'flicker 1.5s infinite',
+              pulse: 'pulse 2s infinite ease-in-out',
+            }
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.553.0",
+    "react-colorful": "https://aistudiocdn.com/react-colorful@^5.6.1"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
